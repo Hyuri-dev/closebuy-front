@@ -1,12 +1,10 @@
-import { Route, Routes } from "react-router";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 
-const AppRoutes = () => {
-  return (
-    <Routes>
-      <Route index element={<Home />}></Route>
-    </Routes>
-  );
-};
+export const AppRoutes = [
+  { path: "/", element: <Home/> }, // Se usará como 'index'
+  { path: "login", element: <Login/> }, // Sin la barra "/" inicial para rutas hijas
+];
 
-export default AppRoutes;
+
+
